@@ -12,7 +12,7 @@ interface ProjectsProps {
 
 // ─── Animated Visualization: V2V Intersection ────────────────────────────────
 function V2VVisualization({ isDark }: { isDark: boolean }) {
-  const [activeNode, setActiveNode] = useState(0)
+  const [_activeNode, setActiveNode] = useState(0)
   const nodes = [
     { id: 'EV-1', x: '14%', y: '28%', color: '#00B4D8' },
     { id: 'EV-2', x: '74%', y: '18%', color: '#48CAE4' },
@@ -105,7 +105,7 @@ function V2VVisualization({ isDark }: { isDark: boolean }) {
 
 // ─── Animated Visualization: EV Charging ────────────────────────────────────
 function EVChargingVisualization({ isDark }: { isDark: boolean }) {
-  const [charge, setCharge] = useState(0.62)
+  const [charge] = useState(0.62)
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
@@ -236,7 +236,7 @@ function EVChargingVisualization({ isDark }: { isDark: boolean }) {
 // ─── Animated Visualization: Smart Parking ──────────────────────────────────
 function SmartParkingVisualization({ isDark }: { isDark: boolean }) {
   const [slot1, setSlot1] = useState<'free' | 'occupied'>('free')
-  const [slot2, setSlot2] = useState<'occupied' | 'free'>('occupied')
+  const [slot2] = useState<'occupied' | 'free'>('occupied')
   const [wifiPulse, setWifiPulse] = useState(false)
 
   // cycle: slot1 toggles every 4s, wifi pulses every 2s

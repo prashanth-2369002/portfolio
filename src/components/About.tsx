@@ -47,8 +47,6 @@ const stats = [
 function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
-  const numVal = parseFloat(value)
-
   return (
     <span ref={ref}>
       {inView ? (
